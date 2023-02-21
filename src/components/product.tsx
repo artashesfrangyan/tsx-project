@@ -22,12 +22,12 @@ export function Product({product}: productProps) {
                 onClick={() => setDetails(prev => !prev)}
             >{ details ? 'Hide details' : 'Show details'}</button>
             {details &&
-                <div>
+            <div>
                     <p>{ product.description }</p>
-                </div>
-            }
-            <p>Rate: <span style={{ fontWeight: 'bold' }}>
-                { product.rating.rate }</span></p>
+                    <p>Rate: <span style={{ fontWeight: 'bold' }}>
+                        { product?.rating?.rate }</span>
+                    </p>
+            </div>}
         </div>
     )
 }
